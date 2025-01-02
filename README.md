@@ -38,7 +38,7 @@ To embed the studio into your project you need to move two files to the root dir
 
 We also recomend to move the [data/](data) folder to the root
 
-🚨🚨🚨 Please make sure to update the reference of the `config file` on [vite.config.js](vite.config.js)
+🚨🚨🚨 Please make sure to update the reference of the `config file` on [sanity.cli.js](sanity.cli.js)
 
 🚩🚩🚩 Small note if you move the project to the root folder `sanity deploy` needs to be run
 on the root folder not on the studio folder

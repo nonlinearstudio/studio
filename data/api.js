@@ -23,7 +23,7 @@ export const client = prodClient;
 
 const builder = imageUrlBuilder(client);
 
-export async function getSanity(query) {
+export async function getQuery(query) {
   const response = await prodClient.fetch(`${query}`);
   return response;
 }

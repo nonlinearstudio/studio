@@ -43,6 +43,11 @@ We also recomend to move the [data/](data) folder to the root
 🚩🚩🚩 Small note if you move the project to the root folder `sanity deploy` needs to be run
 on the root folder not on the studio folder
 
+### Preview
+
+Studio comes with a preview functionality, for this to work you will need a token from your Sanity Studio
+you can find it in api#tokens add it to an .env file as `SANITY_API_TOKEN`
+
 ### Authors
 
 Karl Justiniano - [@karljstn](https://x.com/karljstn)<br>

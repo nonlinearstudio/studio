@@ -1,5 +1,4 @@
 import path from "path";
-import { fileURLToPath } from "url";
 import { defineCliConfig } from "sanity/cli";
 import { config } from "./config";
 
@@ -12,8 +11,9 @@ export default defineCliConfig({
 
     setup.resolve.alias = {
       ...(setup.resolve.alias ?? {}),
-      "@": path.resolve(__dirname, "..", "studio"),
+      "@": path.resolve(__dirname),
     };
+
     return setup;
   },
 });

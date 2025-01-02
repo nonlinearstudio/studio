@@ -1,14 +1,13 @@
 import { defineConfig, isDev } from "sanity";
-import { structureTool } from "sanity/structure";
 import { visionTool } from "@sanity/vision";
-import { schemaTypes } from "./schemas";
-import { structure, defaultDocumentNode } from "./desk";
+import { structureTool } from "sanity/structure";
 import { media } from "sanity-plugin-media";
 import { tags } from "sanity-plugin-tags";
-import { openLiveSite } from "./utils/openLiveSite";
 import { webhooksTrigger } from "sanity-plugin-webhooks-trigger";
+import { schemaTypes } from "./schemas";
+import { structure, defaultDocumentNode } from "./desk";
+import { openLiveSite } from "./utils/openLiveSite";
 import { config } from "./config";
-//const __dirname = path.dirname(fileURLToPath(import.meta.url));
 
 const devOnlyPlugins = [visionTool({ defaultApiVersion: "2021-06-07" })];
 

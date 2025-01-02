@@ -7,13 +7,13 @@ export default defineCliConfig({
   api: {
     ...config,
   },
-  vite: (config) => {
-    if (!config.resolve) config.resolve = {};
+  vite: (setup) => {
+    if (!setup.resolve) setup.resolve = {};
 
-    config.resolve.alias = {
-      ...(config.resolve.alias ?? {}),
+    setup.resolve.alias = {
+      ...(setup.resolve.alias ?? {}),
       "@": path.resolve(__dirname, "..", "studio"),
     };
-    return config;
+    return setup;
   },
 });

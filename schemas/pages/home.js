@@ -19,7 +19,7 @@ export default defineField({
       name: "components",
       title: "Page Components",
       type: "array",
-      of: [{ type: "module.forms" }],
+      of: [{ type: "module.forms" }, { type: "module.richText" }],
     }),
   ],
   preview: {

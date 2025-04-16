@@ -1,9 +1,9 @@
 export function CustomPublishAction(originalPublishAction) {
-  return (props) => {
+  return props => {
     const originalResult = originalPublishAction(props)
     return {
       ...originalResult,
-      label: 'Save', // Customize the label
+      label: "Save", // Customize the label
     }
   }
 }

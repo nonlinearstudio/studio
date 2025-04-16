@@ -1,7 +1,7 @@
-import CustomIframePreview from '../utils/CustomIframePreview'
-import {getPreviewUrl} from '../utils/getPreviewUrl'
+import CustomIframePreview from "../utils/CustomIframePreview"
+import { getPreviewUrl } from "../utils/getPreviewUrl"
 
-export const defaultDocumentNode = (S, {schemaType, documentId}) => {
+export const defaultDocumentNode = (S, { schemaType, documentId }) => {
   if (documentId) {
     return S.document().views([
       S.view.form(),
@@ -9,37 +9,37 @@ export const defaultDocumentNode = (S, {schemaType, documentId}) => {
         .component(CustomIframePreview)
         .options({
           url: () => getPreviewUrl(documentId),
-          defaultSize: 'desktop',
+          defaultSize: "desktop",
           reload: {
             button: true,
           },
         })
-        .title('Desktop'),
+        .title("Desktop"),
       S.view
         .component(CustomIframePreview)
         .options({
           url: () => getPreviewUrl(documentId),
-          defaultSize: 'mobile',
+          defaultSize: "mobile",
           reload: {
             button: true,
           },
         })
-        .title('Mobile'),
+        .title("Mobile"),
     ])
   }
 }
 
 // Default Pages
-import settings from './settings'
-import home from './home'
-import page from './page'
-import menu from './menu'
-import legal from './legal'
-import contactForm from './contactForm'
+import settings from "./settings"
+import home from "./home"
+import page from "./page"
+import menu from "./menu"
+import legal from "./legal"
+import contactForm from "./contactForm"
 
 export const structure = (S, context) =>
   S.list()
-    .title('Content')
+    .title("Content")
     .items([
       settings(S, context),
       menu(S, context),

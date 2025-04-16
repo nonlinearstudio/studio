@@ -1,40 +1,40 @@
-import defineStructure from '../utils/defineStructure'
-import CustomIframePreview from '../utils/CustomIframePreview'
-import {getBaseURL} from '../utils/getBaseURL'
+import defineStructure from "../utils/defineStructure"
+import CustomIframePreview from "../utils/CustomIframePreview"
+import { getBaseURL } from "../utils/getBaseURL"
 
 const baseURL = getBaseURL()
 
-export default defineStructure((S) =>
+export default defineStructure(S =>
   S.listItem()
-    .title('Home')
-    .schemaType('home')
+    .title("Home")
+    .schemaType("home")
     .child(
       S.editor()
-        .title('Home')
-        .schemaType('home')
+        .title("Home")
+        .schemaType("home")
         .views([
           S.view.form(),
           S.view
             .component(CustomIframePreview)
             .options({
               url: () => `${baseURL}preview`,
-              defaultSize: 'desktop',
+              defaultSize: "desktop",
               reload: {
                 button: true,
               },
             })
-            .title('Desktop'),
+            .title("Desktop"),
           S.view
             .component(CustomIframePreview)
             .options({
               url: () => `${baseURL}preview`,
-              defaultSize: 'mobile',
+              defaultSize: "mobile",
               reload: {
                 button: true,
               },
             })
-            .title('Mobile'),
+            .title("Mobile"),
         ])
-        .documentId('home'),
-    ),
+        .documentId("home")
+    )
 )

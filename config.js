@@ -6,4 +6,4 @@ export const config = {
   sitePages: ["page", "legal", "home"],
   local: "http://localhost:4321/",
   netlify: "http://netlify:app/",
-};
+}

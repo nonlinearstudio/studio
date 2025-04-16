@@ -1,6 +1,6 @@
-import groq from "groq";
+import groq from "groq"
 
-const queries = {};
+const queries = {}
 
 queries.image = groq`{
   _type,
@@ -11,7 +11,7 @@ queries.image = groq`{
     'width': metadata.dimensions.width,
     'height': metadata.dimensions.height,
   }),
-}`;
+}`
 
 queries.seo = groq`{
   title,
@@ -20,7 +20,7 @@ queries.seo = groq`{
   image {
     asset-> {url}
   }
-}`;
+}`
 
 queries.menu = groq`{
   mainMenu {
@@ -35,24 +35,24 @@ queries.menu = groq`{
       }
     },
   }
-}`;
+}`
 
 // Components
 
 queries.contactForm = groq`{
   ...
-}`;
+}`
 
 queries.components = groq`{
   _type,
   _type == 'module.contactForm' => ${queries.contactForm},
-}`;
+}`
 
 queries.defaultContent = groq`{
   seo ${queries.seo},
   hero,
   components[] ${queries.components},
-}`;
+}`
 
 queries.settings = groq`{
   seo ${queries.seo},
@@ -64,13 +64,13 @@ queries.settings = groq`{
   private {
     reference -> {...}
   },
-}`;
+}`
 
 queries.home = groq`{
   "slug": '/',
   _type,
   _type == 'home' => ${queries.defaultContent},
-}`;
+}`
 
 queries.page = groq`{
   _updatedAt,
@@ -80,7 +80,7 @@ queries.page = groq`{
   slug,
   hero,
   components[] ${queries.components},
-}`;
+}`
 
 queries.legal = groq`{
   _type,
@@ -90,6 +90,6 @@ queries.legal = groq`{
   slug,
   lastUpdated,
   components[] ${queries.components},
-}`;
+}`
 
-export default queries;
+export default queries

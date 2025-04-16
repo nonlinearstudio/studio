@@ -24,7 +24,7 @@
     "sanity-plugin-tags": "^2.0.2",
     "sanity-plugin-webhooks-trigger": "^0.2.4",
     "slug": "^9.1.0",
-    "styled-components": "^6.1.12"
+    "styled-components": "^6.1.17"
   },
   "devDependencies": {
     "@linear_non/prettier-config": "^1.0.5",

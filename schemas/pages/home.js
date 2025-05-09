@@ -1,5 +1,5 @@
-import { HomeIcon } from "@sanity/icons";
-import { defineField } from "sanity";
+import { HomeIcon } from "@sanity/icons"
+import { defineField } from "sanity"
 
 export default defineField({
   name: "home",
@@ -8,6 +8,14 @@ export default defineField({
   icon: HomeIcon,
 
   fields: [
+    // Title
+    defineField({
+      name: "title",
+      title: "Title",
+      type: "string",
+      description: "The title of the page.",
+      validation: Rule => Rule.required(),
+    }),
     // Hero
     defineField({
       name: "hero",
@@ -27,7 +35,7 @@ export default defineField({
       return {
         subtitle: "Index",
         title: "Home",
-      };
+      }
     },
   },
-});
+})
